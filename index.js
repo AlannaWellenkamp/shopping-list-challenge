@@ -19,6 +19,12 @@ function listInteract() {
       userItem.val("");
     });  
     
+    //listen for check click using delegation
+    $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
+        //from closest list item to button, find shopping item and toggle class
+        $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');              
+    })
+    
 }
 
 //run function listInteract
