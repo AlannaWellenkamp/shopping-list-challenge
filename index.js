@@ -25,6 +25,12 @@ function listInteract() {
         $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');              
     })
     
+    //listen for 'remove' button click using delegation
+    $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
+        //remove closest li to button
+        $(this).closest('li').remove();        
+    })
+
 }
 
 //run function listInteract
